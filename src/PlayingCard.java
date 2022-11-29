@@ -1,66 +1,75 @@
 import java.lang.*;
-import java.util.*;
-import java.io.*;
+
+/**
+ * Playing Card Class, creates and modifys playing card objects.
+ */
 public class PlayingCard {
 
-    private String card_number;
+    private String cardNumber;
 
-    private String card_suit;
+    private String cardSuit;
 
-    public PlayingCard(String input_card_number , String input_card_suit){
+    public PlayingCard(String inputCardNumber , String inputCardSuit){
 
-        if (input_card_number.equals("1")) {
-            this.card_number = "A";
+        if (inputCardNumber.equals("1")) {
+            this.cardNumber = "A";
         }
-        else if (input_card_number.equals("11")) {
-            this.card_number = "J";
+        else if (inputCardNumber.equals("11")) {
+            this.cardNumber = "J";
         }
-        else if (input_card_number.equals("12")) {
-            this.card_number = "Q";
+        else if (inputCardNumber.equals("12")) {
+            this.cardNumber = "Q";
         }
-        else if (input_card_number.equals("13")) {
-            this.card_number = "K";
-        }
-        else {
-            this.card_number = input_card_number;
-        }
-
-        String hearts_string = "\u2764";
-        String spades_string = "\u2660";
-        String diamonds_string = "\u2666";
-        String clubs_string = "\u2663";
-        String card_suit_checker = input_card_suit.toUpperCase();
-        if (card_suit_checker.equals("H")) {
-            this.card_suit = hearts_string;
-        }
-        else if (card_suit_checker.equals("S")) {
-            this.card_suit = spades_string;
-        }
-
-        else if (card_suit_checker.equals("C")) {
-            this.card_suit = clubs_string;
-        }
-
-        else if (card_suit_checker.equals("D")) {
-            this.card_suit = diamonds_string;
+        else if (inputCardNumber.equals("13")) {
+            this.cardNumber = "K";
         }
         else {
-            System.out.println("Please Enter the first letter of the suit you are tring to make. IE for 'Hearts enter H");
+            this.cardNumber = inputCardNumber;
+        }
+
+        String heartsString = "\u2764";
+        String spadesString = "\u2660";
+        String diamondsString = "\u2666";
+        String clubsString = "\u2663";
+        String cardSuitChecker = inputCardSuit.toUpperCase();
+        if (cardSuitChecker.equals("H")) {
+            this.cardSuit = heartsString;
+        }
+        else if (cardSuitChecker.equals("S")) {
+            this.cardSuit = spadesString;
+        }
+
+        else if (cardSuitChecker.equals("C")) {
+            this.cardSuit = clubsString;
+        }
+
+        else if (cardSuitChecker.equals("D")) {
+            this.cardSuit = diamondsString;
+        }
+        else {
+            System.out.println("Please Enter the first letter of the suit you are trying to make. IE for 'Hearts enter H");
         }
     }
 
-
-    public String getCard_number() {
-        return card_number;
+    /**
+     * Method for getting a numerical value of a card
+     * @return string values, because of J, Q, K, A.
+     */
+    public String getCardNumber() {
+        return cardNumber;
     }
 
-    public String getCard_suit() {
-        return card_suit;
+    /**
+     * Method for getting the cards suit.
+     * @return the suit of the playing card object that was passed in. String
+     */
+    public String getCardSuit() {
+        return cardSuit;
     }
 
-
+    @Override
     public String toString() {
-        return card_number + card_suit;
+        return cardNumber + cardSuit;
     }
 
 }

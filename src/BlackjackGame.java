@@ -30,7 +30,7 @@ public class BlackjackGame {
                 int intCardValue = 0;
                 for (int i = 0; i < hand_of_cards.size(); i++) {
                     PlayingCard cardValue = hand_of_cards.get(i);
-                    String stringCardValue = cardValue.getCard_number();
+                    String stringCardValue = cardValue.getCardNumber();
                     if (stringCardValue.equals("A")){
                         intCardValue = 11;
                         handValue += intCardValue;
@@ -63,11 +63,11 @@ public class BlackjackGame {
                         PlayingCard cardDrawn = CardDeck.DrawCard(playingDeck);
                         hand_of_cards.add(cardDrawn);
                         System.out.println("You Drew " + cardDrawn.toString());
-                        if (cardDrawn.getCard_number().equals("A")) {
+                        if (cardDrawn.getCardNumber().equals("A")) {
                             int aceValue = 11;
                             handValue += aceValue;
                             for (int j = 0; j < hand_of_cards.size() ; j++) {
-                                String aceCheckerString = hand_of_cards.get(0).getCard_number();
+                                String aceCheckerString = hand_of_cards.get(0).getCardNumber();
                                 if (aceCheckerString.equals("A")) {
                                     System.out.println("Your current hand is" + hand_of_cards + " with a value of " + handValue);
                                     System.out.println("Would you like your ace to be worth 1 or 11? \n select a for 1, select b for 11");
@@ -84,14 +84,14 @@ public class BlackjackGame {
                                     }
                                 }
                             }
-                        } else if (cardDrawn.getCard_number().equals("J")) {
+                        } else if (cardDrawn.getCardNumber().equals("J")) {
                             handValue += 10;
-                        } else if (cardDrawn.getCard_number().equals("Q")) {
+                        } else if (cardDrawn.getCardNumber().equals("Q")) {
                             handValue += 10;
-                        } else if (cardDrawn.getCard_number().equals("K")) {
+                        } else if (cardDrawn.getCardNumber().equals("K")) {
                             handValue += 10;
                         } else{
-                            handValue += Integer.parseInt(cardDrawn.getCard_number());
+                            handValue += Integer.parseInt(cardDrawn.getCardNumber());
                         }
                     }
                     if (d == 'N') {
@@ -100,7 +100,7 @@ public class BlackjackGame {
                     }
                     if (handValue > 21) {
                         for (int j = 0; j < hand_of_cards.size() ; j++) {
-                            String aceCheckerString = hand_of_cards.get(0).getCard_number();
+                            String aceCheckerString = hand_of_cards.get(0).getCardNumber();
                             if (aceCheckerString.equals("A")) {
                                 System.out.println("Your current hand is" + hand_of_cards + " with a value of " + handValue);
                                 System.out.println("Would you like your ace to be worth 1 or 11? \n select a for 1, select b for 11");
@@ -130,7 +130,7 @@ public class BlackjackGame {
                 int dealerintCardValue = 0;
                 for (int i = 0; i < dealer_hand_of_cards.size(); i++) {
                     PlayingCard dealerCardValue = dealer_hand_of_cards.get(i);
-                    String dealerStringCardValue = dealerCardValue.getCard_number();
+                    String dealerStringCardValue = dealerCardValue.getCardNumber();
                     if (dealerStringCardValue.equals("A")) {
                         dealerintCardValue = 11;
                         dealerhandValue += dealerintCardValue;
@@ -150,7 +150,7 @@ public class BlackjackGame {
                     while(dealerhandValue < 17){
                         PlayingCard dealerCardDrawn = CardDeck.DrawCard(playingDeck);
                         dealer_hand_of_cards.add(dealerCardDrawn);
-                        if (dealerCardDrawn.getCard_number().equals("A")) {
+                        if (dealerCardDrawn.getCardNumber().equals("A")) {
                             if ((dealerhandValue + 11) > 21) {
                                 dealerhandValue += 1;
                             } else {
@@ -158,17 +158,17 @@ public class BlackjackGame {
                             }
 
                         }
-                        else if (dealerCardDrawn.getCard_number().equals("J")){
+                        else if (dealerCardDrawn.getCardNumber().equals("J")){
                             dealerhandValue += 10;
                         }
-                        else if (dealerCardDrawn.getCard_number().equals("Q")){
+                        else if (dealerCardDrawn.getCardNumber().equals("Q")){
                             dealerhandValue += 10;
                         }
-                        else if (dealerCardDrawn.getCard_number().equals("K")){
+                        else if (dealerCardDrawn.getCardNumber().equals("K")){
                             dealerhandValue += 10;
                         }
                         else{
-                            dealerhandValue += Integer.parseInt(dealerCardDrawn.getCard_number());
+                            dealerhandValue += Integer.parseInt(dealerCardDrawn.getCardNumber());
                         }
                     }
 
