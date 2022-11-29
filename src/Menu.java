@@ -15,7 +15,7 @@ public class Menu {
 
 
                 if(c=='A'){
-                    CardDeck.DrawCard(card_deck);
+                    System.out.println(CardDeck.DrawCard(card_deck));
                 }
                 else  if(c=='B'){
                     ArrayList<PlayingCard> hand_of_cards = new ArrayList<>();

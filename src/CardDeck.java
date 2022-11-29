@@ -67,6 +67,38 @@ public class CardDeck {
 
     }
 
+//        public static int MakeBlackJackHand(){
+//            ArrayList<PlayingCard> card_deck = new ArrayList<>();
+//            card_deck = CardDeck.CreateCardDeck();
+//            ArrayList<PlayingCard> hand_of_cards = new ArrayList<>();
+//            hand_of_cards.add(CardDeck.DrawCard(card_deck));
+//            hand_of_cards.add(CardDeck.DrawCard(card_deck));
+//            int handValue = 0;
+//            int intCardValue = 0;
+//            for (int i = 0; i < hand_of_cards.size(); i++) {
+//                PlayingCard cardValue = hand_of_cards.get(i);
+//                String stringCardValue = cardValue.getCard_number();
+//                if (stringCardValue.equals("A")){
+//                    intCardValue = 1;
+//                    handValue += intCardValue;
+//                } else if (stringCardValue.equals("J")) {
+//                    intCardValue = 2;
+//                    handValue += intCardValue;
+//                } else if (stringCardValue.equals("Q")) {
+//                    intCardValue = 3;
+//                    handValue += intCardValue;
+//                } else if (stringCardValue.equals("K")) {
+//                    intCardValue = 4;
+//                    handValue += intCardValue;
+//                }
+//                else {
+//                    intCardValue = Integer.parseInt(stringCardValue);
+//                    handValue += intCardValue;
+//                }
+//                System.out.println(hand_of_cards);
+//            }
+//            return handValue;
+//        }
 }
 
 
